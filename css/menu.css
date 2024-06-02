@@ -1,0 +1,58 @@
+details {
+  color: #ffffff;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+  width: 50%;
+  margin-left: 60px;
+}
+
+summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  color: #ffffff;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+  color: #ffffff;
+}
+.menu {
+  position: fixed;
+  display: flex;
+  background-color: rgb(3 3 3 / 58%);
+  backdrop-filter: blur(10px);
+  width: 105%;
+  height: 100%;
+  left: -4px;
+  z-index: 40;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.menu h1 {
+  margin: 20px;
+}
+
+.menu button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: rgba(250, 237, 237, 0.584);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#inicia-game{
+  width: 50%;
+  margin-left: 25%;
+}

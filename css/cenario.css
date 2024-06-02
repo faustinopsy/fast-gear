@@ -1,0 +1,75 @@
+#game{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  
+}
+.pai-cenario {
+  position: absolute;
+  width: 100vw;
+  height: 100vw;
+  zoom: 0;
+  z-index: 1; 
+}
+
+.cenario {
+  position: relative; 
+  width: 1200px;
+  height: 100%; 
+  z-index: 1; 
+  background: url(../img/pista_04.png); 
+}
+
+#estrada{
+  width: 280px;
+  height: 100%;
+  position: fixed;
+  left: 470px;
+  padding: 0;
+  border: 0;
+  top: 0px;
+  z-index: 20;
+}
+.mostrador-velocidade {
+  position: fixed;
+  top: 10px;
+  left: 10%;
+  width: 50px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 20;
+  transform: rotateX(207deg);
+  transform: rotate(270deg);
+}
+
+.velocidade {
+  width: 100%;
+  height: 0;
+  background-color: green;
+  transition: height 0.1s linear;
+  z-index: 20;
+  
+}
+
+.display-velocidade {
+  position: fixed;
+  top: 90px;
+  width: 100px;
+  left: 10%;
+  font-size: 24px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 20;
+}
+#mostrador-de-tempo {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 30px;
+}

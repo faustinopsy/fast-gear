@@ -40,7 +40,7 @@ function mostrarContainer(show) {
 }
 function iniciarAnimacao(){
   posicaoY+=POSICAO_SOMADA;
-  loading.style.background = `url('./img/loading.png') -30px -${posicaoY}px`
+  loading.style.background = `url('./img/loading.png') -20px -${posicaoY}px`
     if(posicaoY >= POSICAO_MAXIMA){
     clearInterval(loop);
     pararAnimacao();

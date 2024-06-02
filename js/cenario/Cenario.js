@@ -21,6 +21,18 @@
       this.cenario.style.backgroundPositionY = `${this.posicao}px`;
       document.querySelector('.velocidade').style.height =  `${this.velocidade}px`;
       document.querySelector('#velocidade-numero').textContent= `${this.velocidade}`;
+      const quilometragem = document.querySelector('#km')
+      if(quilometragem.datasetID >= '4'){
+        this.cenario.style.background = "url(../img/pista_04.png)"
+        this.cenario.style.backgroundPositionY = `${this.posicao}px`;
+      }
+      if(quilometragem.datasetID >= '6'){
+        this.cenario.style.background = "url(../img/pista_06.png)"
+        this.cenario.style.backgroundPositionY = `${this.posicao}px`;
+      }
+      if (this.velocidade <= 0) {
+        clearInterval(this.intervaloCenario);
+      }
     }
   
     acelerar() {

@@ -4,21 +4,26 @@ export class MostradorDeTempo {
       this.distanciaPercorrida = 0;
       this.intervaloTempo = null;
       this.cenario = cenario;
-      this.mostrador = document.createElement('div');
-      this.mostrador.id = 'mostrador-de-tempo';
-      this.mostrador.style.position = 'fixed';
-      this.mostrador.style.top = '10px';
-      this.mostrador.style.left = '10px';
-      this.mostrador.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-      this.mostrador.style.color = 'white';
-      this.mostrador.style.width = '100px';
-      this.mostrador.style.zIndex = '30';
-      this.mostrador.style.padding = '5px';
-      this.mostrador.style.borderRadius = '5px';
+      this.mostrador = this.criarMostradores('tempo',10)
+      this.km = this.criarMostradores('km',40)
       document.body.appendChild(this.mostrador);
+      document.body.appendChild(this.km);
       this.atualizarMostrador();
     }
-  
+    criarMostradores(id,top){
+      const mostrador = document.createElement('div');
+      mostrador.id = id;
+      mostrador.style.position = 'fixed';
+      mostrador.style.top = `${top}px`;
+      mostrador.style.left = '10px';
+      mostrador.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+      mostrador.style.color = 'white';
+      mostrador.style.width = '130px';
+      mostrador.style.zIndex = '30';
+      mostrador.style.padding = '5px';
+      mostrador.style.borderRadius = '5px';
+      return mostrador
+    }
     iniciar() {
       this.intervaloTempo = setInterval(() => {
         this.tempo += 1;
@@ -42,7 +47,9 @@ export class MostradorDeTempo {
       const segundos = this.tempo % 60;
       const tempoFormatado = `${minutos < 10 ? '0' : ''}${minutos}:${segundos < 10 ? '0' : ''}${segundos}`;
       const quilometragem = (this.distanciaPercorrida / 1000).toFixed(2); 
-      this.mostrador.textContent = `Tempo: ${tempoFormatado} | Quilometragem: ${quilometragem} km`;
+      this.mostrador.textContent = `Tempo: ${tempoFormatado}`;
+      this.km.datasetID = quilometragem
+      this.km.textContent = `Quilometragem: ${quilometragem} km`;
     }
   }
   

@@ -1,6 +1,7 @@
 export class Menu {
     constructor(container) {
         this.container = container; 
+        this.selectedCar = null; 
     }
 
     init() {
@@ -18,13 +19,15 @@ export class Menu {
                 <details>
                 <summary id="opcao">Opções</summary>
                 <div>
-                    <label for="velocidadeVertical">Velocidade Vertical: <span id="velocidadeValor">200</span></label>
-                    <input type="range" id="velocidadeVertical" min="-20" max="2000" value="20">
+                    <div class="pai-menu">
+                        <div id="carro1" style="background: url(../img/carros.png) -33px -17px"></div>
+                        <div id="carro2" style="background: url(../img/carros.png) -146px -17px"></div>
+                        <div id="carro3" style="background: url(../img/carros.png) -257px -17px"></div>
+                        <div id="carro4" style="background: url(../img/carros.png) -369px -17px"></div>
+                        <div id="carro5" style="background: url(../img/carros.png) -656px -238px"></div>
+                        <div id="carro6" style="background: url(../img/carros.png) 148px -236px"></div>
+                    </div>
                 </div>
-                <div>
-                    <label for="gravidade">Gravidade: <span id="gravidadeValor">2</span></label>
-                    <input type="range" id="gravidade" min="1" max="10" value="2">
-            </div>
                 </details>
             </div>
         `;
@@ -34,8 +37,6 @@ export class Menu {
     afterRender() {
         const iniciaopcaoBotao = this.container.querySelector('#inicia-game');
         const opcaoBotao = this.container.querySelector('#opcao');
-        const velocidadeSlider = this.container.querySelector('#velocidadeVertical');
-        const gravidadeSlider = this.container.querySelector('#gravidade');
 
         iniciaopcaoBotao.addEventListener('click', () => {
             this.iniciaJogo();
@@ -45,24 +46,30 @@ export class Menu {
             this.mostrOpcoes();
         });
 
-        velocidadeSlider.addEventListener('input', (e) => {
-            document.getElementById('velocidadeValor').textContent = e.target.value;
-            window.myKyo.velocidadeVertical = parseInt(e.target.value, 10);
-        });
-
-        gravidadeSlider.addEventListener('input', (e) => {
-            document.getElementById('gravidadeValor').textContent = e.target.value;
-            window.myKyo.gravidade = parseInt(e.target.value, 10);
+        document.querySelectorAll('.pai-menu div').forEach(item => {
+            item.addEventListener('click', () => {
+                document.querySelectorAll('.pai-menu div').forEach(el => el.classList.remove('selected'));
+                item.classList.add('selected');
+                this.selectedCar = item.id; 
+            });
         });
     }
 
     iniciaJogo() {
         console.log('Iniciando o jogo...');
-        this.container.innerHTML = ''; 
+        this.container.style.display = 'none'; 
+        this.updateCarImage(); 
     }
 
     mostrOpcoes() {
         console.log('Mostrando opções...');
-        console.log(myKyo)
+    }
+
+    updateCarImage() {
+        if (this.selectedCar) {
+            const carro = document.querySelector('.carro');
+            carro.style.background = document.getElementById(this.selectedCar).style.background;
+            
+        }
     }
 }

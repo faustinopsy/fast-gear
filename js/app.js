@@ -7,7 +7,7 @@ import { init } from './menu/loading.js';
 import { MonitorarPerformance } from "./MonitorarPerformance.js";
 import { Obstaculo } from './Obstaculo.js';
 import { RegistarSW } from "./RegistrarSw.js";
-//new RegistarSW();
+new RegistarSW();
 new MonitorarPerformance();
 
 const mainContainer = document.querySelector('#main-container');

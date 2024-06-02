@@ -23,7 +23,7 @@ O jogo implementa funcionalidades interativas avançadas, como:
 - Controle de Animação: Manipulação de posições de fundo para animar o cenário e dar a impressão de movimento.
 - Ajuste Dinâmico de Configurações: Utilização de elementos de interface para ajustar configurações do jogo em tempo real.
 - Mostrador de Velocidade e Quilometragem: Exibição da velocidade atual e da quilometragem percorrida com base na velocidade e no tempo de jogo.
-<img src='./img/game.png' alt='game'>
+<img src='./img/game.PNG' alt='game'>
 Como Executar
 Para executar o jogo, clone o repositório e abra o arquivo index.html em um navegador moderno que suporte JavaScript e HTML5.
 

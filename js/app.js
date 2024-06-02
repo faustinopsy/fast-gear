@@ -10,7 +10,7 @@ import { RegistarSW } from "./RegistrarSw.js";
 new RegistarSW();
 new MonitorarPerformance();
 
-const mainContainer = document.querySelector('#main-container');
+const mainContainer = document.querySelector('#menu-container');
 const menu = new Menu(mainContainer);
 
 const carroElemento = document.querySelector('.carro');

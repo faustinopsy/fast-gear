@@ -2,7 +2,7 @@ import { Carro } from '../Carro.js';
 import { Menu } from './Menu.js';
 
 
-const mainContainer = document.querySelector('#main-container');
+const mainContainer = document.querySelector('#menu-container');
 const menu = new Menu(mainContainer);
 menu.init();
 

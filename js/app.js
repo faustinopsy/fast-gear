@@ -5,7 +5,8 @@ import { MostradorDeTempo } from './MostradorDeTempo.js';
 import { Menu } from './menu/Menu.js';
 import { init } from './menu/loading.js';
 import { MonitorarPerformance } from "./MonitorarPerformance.js";
-
+import { RegistarSW } from "./RegistrarSw.js";
+new RegistarSW();
 new MonitorarPerformance();
 
 const carroElemento = document.querySelector('.carro');

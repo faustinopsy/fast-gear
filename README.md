@@ -1,39 +1,40 @@
-# Jogo de Ação Sprite
+# Jogo de Corrida Sprite
 ## Descrição
-Este repositório contém um projeto de jogo embrionário desenvolvido como parte de um exercício para treinar técnicas avançadas de manipulação do DOM e uso eficiente de imagens sprite em um contexto de desenvolvimento web. O jogo utiliza uma série de técnicas modernas de JavaScript e CSS para criar uma experiência interativa baseada em sprites animados.
+Este repositório contém um projeto de jogo de corrida embrionário desenvolvido como parte de um exercício para treinar técnicas avançadas de manipulação do DOM e uso eficiente de imagens sprite em um contexto de desenvolvimento web. O jogo utiliza uma série de técnicas modernas de JavaScript e CSS para criar uma experiência interativa baseada em sprites animados.
 
 ## Tecnologias Utilizadas
 - HTML5: Estrutura base do jogo.
 - CSS3: Estilização e animações dos sprites.
 - JavaScript: Lógica de jogo, manipulação do DOM e modularização com classes.
+## Características
+O projeto foca no uso de imagens sprite para a animação de elementos do jogo. Além disso, é feito uso intensivo do DOM para criar interações dinâmicas, como a detecção de colisões e a atualização de estados do jogo.
 
-### Características
-O projeto foca no uso de imagens sprite para a animação de personagens e outros elementos do jogo. Além disso, é feito uso intensivo do DOM para criar interações dinâmicas, como a detecção de colisões e a atualização de estados do jogo.
-
-## Uso de Classes para Modularização
+Uso de Classes para Modularização
 O código é organizado em várias classes para encapsular diferentes aspectos do jogo:
 
-<img src='./img/factory.png'>
-
-- Kyo: Classe que gerencia o personagem principal, incluindo suas animações e interações, como correr, pular e atacar.
-- Inimigo: Classe responsável por controlar os inimigos, incluindo sua aparição, animação e lógica de dano.
-- Cenario: Classe que gerencia o cenário do jogo, controlando aspectos como a mudança de fundos e a interação com o cenário.
-- Menu: Classe que lida com a interface de usuário inicial e as opções de jogo, permitindo ao jogador iniciar o jogo e ajustar configurações como a velocidade e a gravidade.
+- Carro: Classe que gerencia o carro do jogador, incluindo seus movimentos e interações.
+- Cenario: Classe responsável por controlar o cenário, fazendo com que pareça que o carro está se movendo.
+- Controles: Classe que gerencia os controles do jogo, incluindo aceleração, frenagem e movimentação lateral.
+- MostradorDeTempo: Classe que gerencia a exibição do tempo e da quilometragem percorrida no jogo.
 ## Funcionalidades de Interatividade
 O jogo implementa funcionalidades interativas avançadas, como:
-<img src='./img/game.PNG'>
-- Detecção de Colisões: Uso de getBoundingClientRect() para detectar interações entre o personagem principal e os inimigos.
-- Controle de Animação: Manipulação de background positions para animar sprites baseando-se em uma série de imagens contidas em um único arquivo.
-- Ajuste Dinâmico de Configurações: Utilização de elementos de interface como sliders para ajustar configurações do jogo em tempo real.
 
-## Como Executar
+- Detecção de Colisões: Uso de getBoundingClientRect() para detectar interações entre o carro do jogador e os limites da estrada.
+- Controle de Animação: Manipulação de posições de fundo para animar o cenário e dar a impressão de movimento.
+- Ajuste Dinâmico de Configurações: Utilização de elementos de interface para ajustar configurações do jogo em tempo real.
+- Mostrador de Velocidade e Quilometragem: Exibição da velocidade atual e da quilometragem percorrida com base na velocidade e no tempo de jogo.
+<img src='./img/game.PNG' alt='game'>
+Como Executar
 Para executar o jogo, clone o repositório e abra o arquivo index.html em um navegador moderno que suporte JavaScript e HTML5.
 
 ```
-git clone https://github.com/faustinopsy/game-sprites.git
-cd game-sprites
+git clone https://github.com/faustinopsy/gameword.git
+cd gameword
 open index.html 
-# ou use seu navegador para abrir o arquivo
 ```
-## Contribuições
+ou use seu navegador para abrir o arquivo
+Contribuições
 Contribuições são bem-vindas, especialmente na expansão das funcionalidades do jogo, melhorias na lógica de colisão, ou na otimização das animações dos sprites.
+
+Screenshots
+<img src='./img/game2.PNG' alt='game'>

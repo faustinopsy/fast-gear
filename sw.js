@@ -1,30 +1,7 @@
 const CACHE_NAME = 'app-cache-v2';
 const STATIC_ASSETS = [
     './',
-    './index.html',
-    './img/cenario.jpg',
-    './img/inimigo.png',
-    './img/iorix.png',
-    './img/kyo.png',
-    './img/orochi-chris.png',
-    './css/cenario.css',
-    './css/carro.css',
-    './css/inimigo.css',
-    './css/loading.css',
-    './css/main.css',
-    './css/menu.css',
-    './css/controle.css',
-    './css/responsivo.css',
-    './js/app.js',
-    './js/factory/Personagem.js',
-    './js/factory/PersonagemFactory.js',
-    './js/cenario/Cenario.js',
-    './js/menu/controle.js',
-    './js/personagens/inimigo.js',
-    './js/personagens/kyo.js',
-    './js/menu/loading.js',
-    './js/menu/Menu.js',
-    './js/MonitorarPerformance.js'
+    './index.html'
 ];
 
 self.addEventListener('install', function(event) {

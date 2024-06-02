@@ -8,8 +8,10 @@ Este repositório contém um projeto de jogo de corrida embrionário desenvolvid
 - JavaScript: Lógica de jogo, manipulação do DOM e modularização com classes.
 ## Características
 O projeto foca no uso de imagens sprite para a animação de elementos do jogo. Além disso, é feito uso intensivo do DOM para criar interações dinâmicas, como a detecção de colisões e a atualização de estados do jogo.
+- Jogabilidade:
+O jogo agora pode ser usado pelo controles na tela ou pelo teclado onde o "w" acelera o "s" é usado para desacelerar, "d" para mover para direita e "a" mover para esquerda.
 
-Uso de Classes para Modularização
+## Uso de Classes para Modularização
 O código é organizado em várias classes para encapsular diferentes aspectos do jogo:
 
 - Carro: Classe que gerencia o carro do jogador, incluindo seus movimentos e interações.

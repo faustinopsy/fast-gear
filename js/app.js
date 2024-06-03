@@ -29,7 +29,7 @@ document.addEventListener('visibilitychange', function(){
 document.getElementById('restart-button').addEventListener('click', () => {
     location.reload(); 
   });
-  
+
 
 init();
 mostradorDeTempo.iniciar()

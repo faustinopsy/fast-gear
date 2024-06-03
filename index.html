@@ -46,7 +46,7 @@
         </div>
         <svg class="speed-indicator" viewBox="0 0 100 50">
           <path d="M 10,45 A 40,40 0 0,1 90,45" stroke="#00FF00" stroke-width="5" fill="none"/>
-          <line x1="50" y1="45" x2="50" y2="15" stroke="#00FF00" stroke-width="2" transform="rotate(35 50 45)"/>
+          <line id="line" x1="50" y1="45" x2="50" y2="15" stroke="#00FF00" stroke-width="2" transform="rotate(-90 50 45)"/>
       </svg>
       </div>
   </div>
@@ -63,31 +63,35 @@
       <div class="controle"></div>
     </div>
     <div class="right-panel">
-      <div class="player">
-          <div class="album-art">
-              <img src="album-art.jpg" alt="Album Art">
-              <div class="circle">
-                  <div class="circle-inner"></div>
-                  <div class="circle-outer"></div>
-              </div>
-          </div>
-          <div class="song-info">
-              <div class="song-title">Switch</div>
-              <div class="artist">Iggy Azalea</div>
-          </div>
-          <div class="player-controls">
-              <button class="player-btn"><i class="material-icons">skip_previous</i></button>
-              <button class="player-btn"><i class="material-icons">play_arrow</i></button>
-              <button class="player-btn"><i class="material-icons">skip_next</i></button>
-          </div>
-          <div class="song-progress">
-              <span>2:15</span>
-              <div class="progress-bar">
-                  <div class="progress" style="width: 66%;"></div>
-              </div>
-              <span>3:28</span>
-          </div>
-      </div>
+      <div class="playlist">
+        <div class="player">
+            <div class="album-art">
+                <img src="album-art.jpg" alt="Album Art">
+                <div class="circle">
+                    <div class="circle-inner"></div>
+                    <div class="circle-outer"></div>
+                </div>
+            </div>
+            <div class="song-info">
+                <div class="song-title">Switch</div>
+                <div class="artist">Iggy Azalea</div>
+            </div>
+            <div class="player-controls">
+                <button class="player-btn" ><i class="material-icons">skip_previous</i></button>
+                <button class="player-btn" ><i class="material-icons">play_arrow</i></button>
+                <button class="player-btn" ><i class="material-icons">skip_next</i></button>
+            </div>
+            <div class="song-progress">
+                <span class="current-time">0:00</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 0%;"></div>
+                </div>
+                <span class="total-time">0:00</span>
+            </div>
+            <audio id="audio-player" src="music/musica.mp3"></audio>
+        </div>
+    </div>
+    
   </div>
       
 

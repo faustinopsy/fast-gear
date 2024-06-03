@@ -22,6 +22,10 @@
       document.querySelector('.velocidade').style.height =  `${this.velocidade}px`;
       document.querySelector('#velocidade-numero').textContent= `${this.velocidade}`;
       const quilometragem = document.querySelector('#km')
+      const rotateAngle = this.velocidade -90; 
+      document.querySelector('#line').setAttribute('transform', `rotate(${rotateAngle} 50 45)`);
+
+
       if(quilometragem.datasetID >= '4'){
         this.cenario.style.background = "url(../img/pista_04.png)"
         this.cenario.style.backgroundPositionY = `${this.posicao}px`;

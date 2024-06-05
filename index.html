@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/loading.css">
   <link rel="stylesheet" href="css/cenario.css">
   <link rel="stylesheet" href="css/carro.css">
-  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="css/materialize.css">
   <link rel="stylesheet" href="css/styles.css">
   <title>teste sprite</title>
 </head>
@@ -54,12 +54,9 @@
       <div class="pai-cenario">
         <div class="cenario" style="background: url(../img/pista_02.png)"></div>
         <div id="estrada"></div>
-      </div>
-      <div class="pai-carro">
-        <div class="carro">
-        </div>
-      </div>
       
+      <div class="carro"></div>
+    </div>
       <div class="controle"></div>
     </div>
     <div class="right-panel">
@@ -78,7 +75,7 @@
             </div>
             <div class="player-controls">
                 <button class="player-btn" ><i class="material-icons">skip_previous</i></button>
-                <button class="player-btn" ><i class="material-icons">play_arrow</i></button>
+                <button class="player-btn" id="player"><i class="material-icons">play_arrow</i></button>
                 <button class="player-btn" ><i class="material-icons">skip_next</i></button>
             </div>
             <div class="song-progress">

@@ -29,7 +29,7 @@ export class Obstaculo {
         obstaculo.classList.add('obstaculo', 'carro');
         obstaculo.style.position = 'absolute';
         obstaculo.style.top = '-40px';
-        obstaculoPosicao = 470 + Math.random() * 280;
+        obstaculoPosicao = 570 + Math.random() * 280;
         obstaculo.style.left = `${obstaculoPosicao}px`;
         posicaoValida = !this.verificarSobreposicao(obstaculoPosicao);
         tentativas++;
@@ -86,7 +86,7 @@ export class Obstaculo {
             document.getElementById('vida-preenchimento').style.clipPath = `inset( 0 0 ${100 - this.danos}%)`;
           } else if (colisaoLateral) {
             console.log('Colisão lateral detectada');
-            this.danos=this.danos+1
+            this.danos=this.danos-5
             document.getElementById('vida-preenchimento').style.clipPath = `inset( 0 0 ${100 - this.danos}%)`;
           }
 

@@ -7,7 +7,7 @@ import { init } from './menu/loading.js';
 import { MonitorarPerformance } from "./MonitorarPerformance.js";
 import { Obstaculo } from './Obstaculo.js';
 import { RegistarSW } from "./RegistrarSw.js";
-new RegistarSW();
+//new RegistarSW();
 new MonitorarPerformance();
 
 const mainContainer = document.querySelector('#menu-container');
@@ -30,6 +30,20 @@ document.getElementById('restart-button').addEventListener('click', () => {
     location.reload(); 
   });
 
+  const xmusica = document.getElementById("audio-player"); 
+  const play = document.querySelector('#player') 
+  let tocando = false;
+  play.addEventListener('click', function(){
+    if(!tocando){
+      document.querySelector('#player').innerHTML = '<i class="material-icons">pause_arrow</i>'
+      xmusica.play(); 
+      tocando = true
+    }else{
+      document.querySelector('#player').innerHTML = '<i class="material-icons">play_arrow</i>'
+      xmusica.pause(); 
+      tocando = false
+    }
+  })
 
 init();
 mostradorDeTempo.iniciar()

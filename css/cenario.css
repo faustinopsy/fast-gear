@@ -21,10 +21,10 @@
 }
 
 #estrada{
-  width: 280px;
+  width: 430px;
   height: 100%;
-  position: fixed;
-  left: 470px;
+  position: relative;
+  left: 294px;
   padding: 0;
   border: 0;
   top: 0px;
@@ -57,9 +57,9 @@
 
 .display-velocidade {
   position: fixed;
-  top: 90px;
+  top: 108px;
   width: 100px;
-  left: 50px;
+  left: 72px;
   font-size: 24px;
   color: #fff;
   padding: 5px 10px;
@@ -98,9 +98,9 @@
 
 #vida-mostrador {
   position: fixed;
-  top: 131px;
-  left: 12px;
-  width: 89px;
+  top: 154px;
+  left: 40px;
+  width: 95px;
   height: 188px;
   overflow: hidden;
 }

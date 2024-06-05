@@ -10,7 +10,7 @@ export class Carro {
   }
 
   moverParaEsquerda(velocidade) {
-    if(velocidade<1) return true
+    if(velocidade < 1) return true
     const estrada = document.getElementById('estrada');
     const estradaRect = estrada.getBoundingClientRect();
     const carroRect = this.carro.getBoundingClientRect();
@@ -22,7 +22,7 @@ export class Carro {
   }
 
   moverParaDireita(velocidade) {
-    if(velocidade<1) return true
+    if(velocidade < 1) return true
     const estrada = document.getElementById('estrada');
     const estradaRect = estrada.getBoundingClientRect();
     const carroRect = this.carro.getBoundingClientRect();
